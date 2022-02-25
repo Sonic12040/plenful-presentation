@@ -26,30 +26,11 @@
     "defaultRemote": "origin"
   },
   "eventHooks": {
-    "preRushInstall": ["common/scripts/pre-rush-install.js"],
+    "preRushInstall": [],
     "postRushInstall": [],
     "preRushBuild": [],
     "postRushBuild": []
   },
   "telemetryEnabled": true,
-  "projects": [
-    {
-      "packageName": "presentation-app",
-      "projectFolder": "apps/presentation-app",
-      "reviewCategory": "production",
-      "cyclicDependencyProjects": [],
-      "skipRushCheck": false,
-      "shouldPublish": false
-    },
-    {
-      "packageName": "eslint-config",
-      "projectFolder": "tools/eslint-config",
-      "reviewCategory": "tools"
-    },
-    {
-      "packageName": "base-components",
-      "projectFolder": "libraries/base-components",
-      "reviewCategory": "production"
-    }
-  ]
+  "projects": []
 }
