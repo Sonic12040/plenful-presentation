@@ -47,11 +47,6 @@
       "reviewCategory": "tools"
     },
     {
-      "packageName": "prettier-config",
-      "projectFolder": "tools/prettier-config",
-      "reviewCategory": "tools"
-    },
-    {
       "packageName": "base-components",
       "projectFolder": "libraries/base-components",
       "reviewCategory": "production"
