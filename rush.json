@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.62.1",
+  "pnpmVersion": "6.32.1",
+  "pnpmOptions": {
+    "pnpmStore": "local",
+    "strictPeerDependencies": true,
+    "preventManualShrinkwrapChanges": true
+  },
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0",
+  "ensureConsistentVersions": true,
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 2,
+  "approvedPackagesPolicy": {
+    "reviewCategories": ["production", "tools", "prototypes"],
+    "ignoredNpmScopes": ["@types"]
+  },
+  "gitPolicy": {
+    "versionBumpCommitMessage": "Bump versions [skip ci]",
+    "changeLogUpdateCommitMessage": "Update changelogs [skip ci]"
+  },
+
+  "repository": {
+    "url": "https://github.com/Sonic12040/plenful-presentation",
+    "defaultBranch": "main",
+    "defaultRemote": "origin"
+  },
+  "eventHooks": {
+    "preRushInstall": ["common/scripts/pre-rush-install.js"],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "telemetryEnabled": true,
+  "projects": [
+    {
+      "packageName": "presentation-app",
+      "projectFolder": "apps/presentation-app",
+      "reviewCategory": "production",
+      "cyclicDependencyProjects": [],
+      "skipRushCheck": false,
+      "shouldPublish": false
+    },
+    {
+      "packageName": "eslint-config",
+      "projectFolder": "tools/eslint-config",
+      "reviewCategory": "tools"
+    },
+    {
+      "packageName": "prettier-config",
+      "projectFolder": "tools/prettier-config",
+      "reviewCategory": "tools"
+    },
+    {
+      "packageName": "base-components",
+      "projectFolder": "libraries/base-components",
+      "reviewCategory": "production"
+    }
+  ]
+}
